@@ -359,7 +359,7 @@ namespace NewAdmin
         {
             string data = "";
 
-            string queryString = "select name  as TableName from sys.tables;";
+            string queryString = "select name  as TableName from sys.tables order by tablename;";
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CRMNewEntitiesNew"].ConnectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);

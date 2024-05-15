@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc46721ad44342d9a2c79ef4c2ed557e" Name="Diagram1">
+        <EntityTypeShape EntityType="CourierDB2023Model.ACMManageBanner" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ACTIVITYRIGHT" Width="1.5" PointX="5.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.city" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.country" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.CRMUserSetup" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.CRUP_MST" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.CRUPAudit" Width="1.5" PointX="9.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.EmployeeType" Width="1.5" PointX="11.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.FUNCTION_MST" Width="1.5" PointX="11.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_DT" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_DT_Sales" Width="1.5" PointX="2.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_HD" Width="1.5" PointX="4.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_HD_Sales" Width="1.5" PointX="6.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_HD_Sales_tmp" Width="1.5" PointX="13.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTR_sales_payment" Width="1.5" PointX="8.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICTRPayTerms_HD" Width="1.5" PointX="10.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ICUOM" Width="1.5" PointX="15.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.MODULE_MAP" Width="1.5" PointX="15.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.MODULE_MST" Width="1.5" PointX="15.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.PRIVILAGE_MENUDemon" Width="1.5" PointX="17.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.PRIVILEGE_MST" Width="1.5" PointX="17.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.RefLabelMST" Width="1.5" PointX="17.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.REFTABLE" Width="1.5" PointX="12.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.RefTableAdmin" Width="1.5" PointX="19.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ROLE_MST" Width="1.5" PointX="19.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.RoleActivity" Width="1.5" PointX="19.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.Role" Width="1.5" PointX="19.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.SystemUser" Width="1.5" PointX="14.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AirWayBill" Width="1.5" PointX="19.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AirWayBill_Temp" Width="1.5" PointX="21.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AirWayBillLog" Width="1.5" PointX="21.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Awb_ConsolidationGrp" Width="1.5" PointX="21.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AWB_ConsolidationMst" Width="1.5" PointX="21.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AWBDriverDRS" Width="1.5" PointX="8.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AWBShipItems" Width="1.5" PointX="16.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AWBStatus" Width="1.5" PointX="23.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Cashier" Width="1.5" PointX="23.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_CashierProcess" Width="1.5" PointX="23.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Currency_Type" Width="1.5" PointX="23.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Customer" Width="1.5" PointX="10.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBL_CUSTOMERDELIVERY_DTL" Width="1.5" PointX="25.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Delivery" Width="1.5" PointX="25.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Employee" Width="1.5" PointX="12.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Financial" Width="1.5" PointX="25.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Group" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_GroupMenu" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Menu" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_TarriefLocalRates" Width="1.5" PointX="25.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_TarriefRates" Width="1.5" PointX="0.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_TarriefZone" Width="1.5" PointX="2.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_UserRule" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblActSLSetup" Width="1.5" PointX="23.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblAirWayMain" Width="1.5" PointX="25.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblAirWayMain2Packing" Width="1.5" PointX="27.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCashier" Width="1.5" PointX="27.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCategoryMaster" Width="1.5" PointX="27.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCityStatesCounty" Width="1.5" PointX="27.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCompanyMaster" Width="1.5" PointX="27.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLCOMPANYSETUP" Width="1.5" PointX="27.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLCONTACT_DEL_ADRES" Width="1.5" PointX="29.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblContract_driver" Width="1.5" PointX="29.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCOUNTRY" Width="1.5" PointX="29.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCustomerAddress" Width="1.5" PointX="4.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblDistrictStatesCounty" Width="1.5" PointX="31.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblDriverAreaBlock" Width="1.5" PointX="31.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblDriverDeliverystatu" Width="1.5" PointX="6.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblInvoiceDetail" Width="1.5" PointX="8.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblInvoiceHead" Width="1.5" PointX="31.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLLabelDTL" Width="1.5" PointX="31.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLLabelMST" Width="1.5" PointX="31.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblLanguage" Width="1.5" PointX="31.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLLOCATION" Width="1.5" PointX="0.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TBLMaintanance" Width="1.5" PointX="14.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblMenuMaster" Width="1.5" PointX="16.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblPrintSetup" Width="1.5" PointX="33.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblRef" Width="1.5" PointX="33.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblState" Width="1.5" PointX="33.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbltranssubtype" Width="1.5" PointX="33.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbltranstype" Width="1.5" PointX="21.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblUserMaster" Width="1.5" PointX="33.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblUserPermission" Width="1.5" PointX="33.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblZipCodeDistrictStatesCounty" Width="1.5" PointX="29.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TemplateMaster" Width="1.5" PointX="31.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tempUser1" Width="1.5" PointX="33.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TreeFunction" Width="1.5" PointX="35.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.TreeNode" Width="1.5" PointX="35.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.USER_DTL" Width="1.5" PointX="35.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.USER_MST" Width="1.5" PointX="35.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.User_Product_Add" Width="1.5" PointX="23.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.USER_RIGHTS" Width="1.5" PointX="35.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.USER_ROLE" Width="1.5" PointX="2.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_AccountType" Width="1.5" PointX="8.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Driver" Width="1.5" PointX="14.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Employeetest" Width="1.5" PointX="16.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_ShipmentItems" Width="1.5" PointX="37.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_UserLogin" Width="1.5" PointX="4.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Vendor" Width="1.5" PointX="37.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tbl_Window" Width="1.5" PointX="37.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblBlankRow" Width="1.5" PointX="37.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCourierImport" Width="1.5" PointX="37.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblCourierImport_Temp" Width="1.5" PointX="37.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.tblRefModule" Width="1.5" PointX="37.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.testing" Width="1.5" PointX="39.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.CountStatDistCity" Width="1.5" PointX="39.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.View_CustomerListCountryCityState" Width="1.5" PointX="39.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.ViewCountryStateCity" Width="1.5" PointX="39.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.vmSenderReceiver" Width="1.5" PointX="39.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.vmSenderReceiverNew" Width="1.5" PointX="39.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierDB2023Model.VwAWStatusCatWise" Width="1.5" PointX="29.75" PointY="41.5" IsExpanded="true" />
+        <AssociationConnector Association="CourierDB2023Model.FK_tbl_GroupMenu_tbl_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="CourierDB2023Model.FK_tbl_GroupMenu_tbl_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="CourierDB2023Model.FK_tbl_UserRule_tbl_Menu" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

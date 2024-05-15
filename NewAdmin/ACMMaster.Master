@@ -4,8 +4,8 @@
 
 <html lang="en" id="htmlTag" direction="" dir="" style="direction:">
 	<!--begin::Head-->
-	<head runat="server" />
-<base href="../../" />
+	<head runat="server">
+
 		<title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -30,9 +30,7 @@
 		<!--end::Global Stylesheets Bundle-->
 		<!--begin::Page Vendor Stylesheets(used by this page)-->
 		<link href="assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendor Stylesheets-->
-
-		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		
 		<link href="assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
