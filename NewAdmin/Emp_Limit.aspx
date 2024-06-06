@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/NewAcmMaster(rtl).master" AutoEventWireup="true" CodeBehind="[Title].aspx.cs" Inherits="NewAdmin.[Title]"  %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/AcmMaster.master" AutoEventWireup="true" CodeBehind="Emp_Limit.aspx.cs" Inherits="NewAdmin.Emp_Limit"  %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -12,7 +12,7 @@
                         <i class="fa fa-circle"></i>
                     </li>
                     <li>
-                        <a href="#">[Title]</a>
+                        <a href="#">Emp_Limit</a>
                     </li>
                 </ul>
                 <asp:Panel ID="pnlSuccessMsg" runat="server" Visible="false">
@@ -38,12 +38,56 @@
 									<!--begin::Form-->
 										<form id="kt_project_settings_form" class="form">
 											<!--begin::Card body-->
-												[PageContent]
+												<!--begin::Card body-->
+<div class="card-body p-9">
+	<!--begin::Row-->
+	<div class="row mb-5">
+		<!--begin::Col-->
+		<div class="col-xl-3">
+			<div class="fs-6 fw-semibold mt-2 mb-3">Edit Table</div>
+		</div>
+		<!--end::Col-->
+	</div>
+	<!--end::Row--><!--begin::Row--><div class="row mb-8">
+		<!--bigin::Col-->
+		<div class="col-xl-1"></div>
+		<!--end::Col-->
+		<!--begin::Col-->
+		<div class="col-xl-1">
+			<div class="fs-6 fw-semibold mt-2 mb-3"> NAME</div>
+		</div>
+		<!--end::Col-->
+		<!--begin::Col-->
+		<div class="col-xl-9 fv-row">
+			<asp:DropDownList style=" ID="drpID" runat="server" class="form-control form-control-solid" name="type" value="" ></asp:DropDownList>
+		</div>
+	</div>
+	<!--end::Row--><!--begin::Row--><div class="row mb-8">
+		<!--bigin::Col-->
+		<div class="col-xl-1"></div>
+		<!--end::Col-->
+		<!--begin::Col-->
+		<div class="col-xl-1">
+			<div class="fs-6 fw-semibold mt-2 mb-3">P NAME</div>
+		</div>
+		<!--end::Col-->
+		<!--begin::Col-->
+		<div class="col-xl-9 fv-row">
+			<asp:TextBox style=" ID="txtPID" runat="server" TextMode="MultiLine" class="form-control form-control-solid" name="type" value="" ></asp:TextBox>
+		</div>
+	</div>
+	<!--end::Row--></div>
+<!--end::Card body-->
 											<!--end::Card body-->
 											<!--begin::Card footer-->
 											<div class="card-footer d-flex justify-content-end py-6 px-9">
-												
-												<asp:button ID="btnAdd" runat="server" ValidationGroup="submit" OnClick="btnSave_Click" class="btn btn-light btn-active-light-primary me-2" Text="Save 3"></asp:button>
+												<div class="btn-group btn-group-circle btn-group-solid">
+													<asp:Button ID="btnFirst" class="btn btn-light-danger font-weight-bold mr-2" runat="server" OnClick="btnFirst_Click" Text="First" />
+													<asp:Button ID="btnNext" class="btn btn-light-success font-weight-bold mr-2" runat="server" OnClick="btnNext_Click" Text="Next" />
+													<asp:Button ID="btnPrev" class="btn btn-light-warning font-weight-bold mr-2" runat="server" OnClick="btnPrev_Click" Text="Prev" />
+													<asp:Button ID="btnLast" class="btn btn-light-primary font-weight-bold mr-2" runat="server" Text="Last" OnClick="btnLast_Click" />
+												</div>
+												<asp:button ID="btnAdd" runat="server" ValidationGroup="submit" OnClick="btnSave_Click" class="btn btn-light btn-active-light-primary me-2" Text="Update"></asp:button>
 												<asp:button ID="btnCancel" runat="server" class="btn green-haze btn-circle font-weight-bold mr-2" OnClick="btnCancel_Click" Text="Cancel" ></asp:button>
 											</div>
 											<!--end::Card footer-->
@@ -61,7 +105,7 @@
 					<div class="card-header mt-5">
 						<!--begin::Card title-->
 						<div class="card-title flex-column">
-							<h3 class="fw-bold mb-1">[Title] List</h3>
+							<h3 class="fw-bold mb-1">Emp_Limit List</h3>
 						</div>
 						<!--begin::Card title-->
 						<!--begin::Card toolbar-->
@@ -94,20 +138,41 @@
 						</div>
 						<!--begin::Card toolbar-->
 					</div>
-
-
+					<!--end::Card header-->
+					<!--begin::Card body-->
 					<div class="card-body pt-0">
 						<!--begin::Table container-->
 						<div class="table-responsive">
 							<!--begin::Table-->
-							<table id="kt_ecommerce_sales_table" class="table align-middle table-row-dashed fs-6 gy-5">
-								<thead>
-									<tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-										[txtTableHeader]
+							<table id="kt_profile_overview_table" class="table table-row-bordered table-row-dashed gy-4 align-middle fw-bold">
+								<thead class="fs-7 text-gray-500 text-uppercase">
+									<tr>
+										<th class="min-w-50px">ID</th>
+<th class="min-w-50px">PID</th>
+<th class="min-w-50px">EmployeeID</th>
+<th class="min-w-50px">Employee_name</th>
+<th class="min-w-50px">Emp_dept</th>
+<th class="min-w-50px">Emp_Manager</th>
+<th class="min-w-50px">Emp_Limitnew</th>
+<th class="min-w-50px">Previous_emp_limit_no</th>
+<th class="min-w-50px">Previous_emp_Limit1</th>
+<th class="min-w-50px">Previous_emp_Limit2</th>
+<th class="min-w-50px">Previous_emp_limit3</th>
+<th class="min-w-50px">Previous_emp_limit4</th>
+<th class="min-w-50px">Previous_emp_limit5</th>
+<th class="min-w-50px">created_date</th>
+<th class="min-w-50px">revised_date1</th>
+<th class="min-w-50px">revised_date2</th>
+<th class="min-w-50px">revised_date3</th>
+<th class="min-w-50px">revised_date4</th>
+<th class="min-w-50px">revised_date5</th>
+<th class="min-w-50px">MPC_Member</th>
+<th class="min-w-50px">MPC_Number</th>
+
 										<td>Action</td>
 									</tr>
 								</thead>
-								<tbody class="fw-semibold text-gray-600">
+								<tbody class="fs-6">
 									<asp:ListView ID="Listview1" runat="server" OnItemCommand="ListProduct_ItemCommand" DataKey="ID" DataKeyNames="ID">
 										<LayoutTemplate>
 											<tr id="ItemPlaceholder" runat="server">
@@ -115,7 +180,28 @@
 										</LayoutTemplate>
 										<ItemTemplate>
 											<tr>
-												[txtTableBody]
+												<td> <%# Eval("ID")%> </td>
+<td> <%# Eval("PID")%> </td>
+<td> <%# Eval("EmployeeID")%> </td>
+<td> <%# Eval("Employee_name")%> </td>
+<td> <%# Eval("Emp_dept")%> </td>
+<td> <%# Eval("Emp_Manager")%> </td>
+<td> <%# Eval("Emp_Limitnew")%> </td>
+<td> <%# Eval("Previous_emp_limit_no")%> </td>
+<td> <%# Eval("Previous_emp_Limit1")%> </td>
+<td> <%# Eval("Previous_emp_Limit2")%> </td>
+<td> <%# Eval("Previous_emp_limit3")%> </td>
+<td> <%# Eval("Previous_emp_limit4")%> </td>
+<td> <%# Eval("Previous_emp_limit5")%> </td>
+<td> <%# Eval("created_date")%> </td>
+<td> <%# Eval("revised_date1")%> </td>
+<td> <%# Eval("revised_date2")%> </td>
+<td> <%# Eval("revised_date3")%> </td>
+<td> <%# Eval("revised_date4")%> </td>
+<td> <%# Eval("revised_date5")%> </td>
+<td> <%# Eval("MPC_Member")%> </td>
+<td> <%# Eval("MPC_Number")%> </td>
+
 
 												<td class="text-center">
 													<div class="d-flex justify-content-end flex-shrink-0">
@@ -142,7 +228,7 @@
 														</asp:LinkButton>
 													</div>
 												</td>  
-												[PageContentGridView]     
+												     
 											</tr>
 										</ItemTemplate>
 									</asp:ListView>

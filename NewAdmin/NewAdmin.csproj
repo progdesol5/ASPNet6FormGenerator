@@ -73,7 +73,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add-order.html" />
+    <Content Include="addnewrefname.aspx" />
     <Content Include="assets\css\style.bundle.css" />
     <Content Include="assets\js\custom\account\api-keys\api-keys.js" />
     <Content Include="assets\js\custom\account\billing\general.js" />
@@ -2300,7 +2300,6 @@
     <Content Include="assets\webpack\plugins\custom\typedjs\typedjs.bundle.js" />
     <Content Include="assets\webpack\plugins\custom\vis-timeline\vis-timeline.bundle.css" />
     <Content Include="assets\webpack\plugins\custom\vis-timeline\vis-timeline.bundle.js" />
-    <Content Include="listing.html" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -2311,9 +2310,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Ref.aspx" />
     <Content Include="selectnew.aspx" />
-    <Content Include="Newselect.aspx" />
-    <Content Include="Select.aspx" />
+    <Content Include="trial.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2331,21 +2330,28 @@
     <Compile Include="AccountType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ACMManageBanner.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ACMMaster.Master.cs">
-      <DependentUpon>ACMMaster.Master</DependentUpon>
+    <Compile Include="ACM.Master.cs">
+      <DependentUpon>ACM.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ACMMaster.Master.designer.cs">
-      <DependentUpon>ACMMaster.Master</DependentUpon>
+    <Compile Include="ACM.Master.designer.cs">
+      <DependentUpon>ACM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ACMManageBanner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ACTIVITYRIGHT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="AddGift.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="addnewrefname.aspx.cs">
+      <DependentUpon>addnewrefname.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addnewrefname.aspx.designer.cs">
+      <DependentUpon>addnewrefname.aspx</DependentUpon>
     </Compile>
     <Compile Include="Answers_MST.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -2900,6 +2906,13 @@
     <Compile Include="Receipe_Menegement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Ref.aspx.cs">
+      <DependentUpon>Ref.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ref.aspx.designer.cs">
+      <DependentUpon>Ref.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RefLabelMST.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -2934,21 +2947,7 @@
     <Compile Include="selectnew.aspx.designer.cs">
       <DependentUpon>selectnew.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Newselect.aspx.cs">
-      <DependentUpon>Newselect.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Newselect.aspx.designer.cs">
-      <DependentUpon>Newselect.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Select.aspx.cs">
-      <DependentUpon>Select.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Select.aspx.designer.cs">
-      <DependentUpon>Select.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SenegalPageContent.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -3564,6 +3563,13 @@
     <Compile Include="TreeNode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="trial.aspx.cs">
+      <DependentUpon>trial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trial.aspx.designer.cs">
+      <DependentUpon>trial.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -3896,7 +3902,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ACMMaster.Master" />
     <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.ttf" />
     <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-brands-400.woff2" />
     <Content Include="assets\plugins\global\fonts\%40fortawesome\fa-regular-400.ttf" />
@@ -3928,6 +3933,7 @@
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.ttf" />
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.woff" />
     <Content Include="assets\plugins\global\fonts\line-awesome\la-solid-900.woff2" />
+    <Content Include="NewACMMaster.Master" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -3935,7 +3941,7 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="NewACMMaster.Master" />
+    <Content Include="ACM.Master" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\PG.pubxml" />
     <Content Include="temp\common.temp" />

@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/AcmMaster.master" AutoEventWireup="true" CodeBehind="[Title].aspx.cs" Inherits="NewAdmin.[Title]"  %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/NewAcmMaster.master" AutoEventWireup="true" CodeBehind="[Title].aspx.cs" Inherits="NewAdmin.[Title]"  %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -32,14 +32,9 @@
                                         <span class="caption-subject font-green-sharp bold uppercase">[Title]</span>
                                     </div>
                                     <div class="actions btn-set">
-                                        <div class="btn-group btn-group-circle btn-group-solid">
-                                            <asp:Button ID="btnFirst" class="btn red" runat="server" OnClick="btnFirst_Click" Text="First" />
-                                            <asp:Button ID="btnNext" class="btn green" runat="server" OnClick="btnNext_Click" Text="Next" />
-                                            <asp:Button ID="btnPrev" class="btn purple" runat="server" OnClick="btnPrev_Click" Text="Prev" />
-                                            <asp:Button ID="btnLast" class="btn blue" runat="server" Text="Last" OnClick="btnLast_Click" />
-                                        </div>
+                                       
 
-                                        <asp:Button ID="btnAdd" runat="server" class="btn green-haze btn-circle" ValidationGroup="submit" Text="Update " OnClick="btnSave_Click" />
+                                        <asp:Button ID="btnAdd" runat="server" class="btn green-haze btn-circle" ValidationGroup="submit" Text="Submit 5" OnClick="btnSave_Click" />
                                        
                                         <asp:Button ID="btnCancel" runat="server" class="btn green-haze btn-circle" OnClick="btnCancel_Click" Text="Cancel" />
                                     </div>

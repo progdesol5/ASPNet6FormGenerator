@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 using System.Transactions;
 namespace NewAdmin
 {
-public partial class [Title] : System.Web.UI.Page
+public partial class TBLBIN : System.Web.UI.Page
 {
     atyaabEntities DB = new atyaabEntities();
     protected void Page_Load(object sender, EventArgs e)
@@ -30,15 +30,19 @@ public partial class [Title] : System.Web.UI.Page
 			if (Request.QueryString.Count > 0)
 			{
 				int ID = Convert.ToInt32(Request.QueryString["ID"]);
-				[Title] obj[Title] = DB.[Title]s.Single(p=>p.ID == ID);
+				TBLBIN objTBLBIN = DB.TBLBINs.Single(p=>p.BIN_ID == ID);
 				//Server Content Recived data Yogesh
-				[ServerContentRecived] 
+				drpBIN_ID.SelectedValue = objTBLBIN.BIN_ID.ToString();
+drpMyComLocID.SelectedValue = objTBLBIN.MyComLocID.ToString();
+txtBINDesc1.Text = objTBLBIN.BINDesc1.ToString();
+txtBINDesc2.Text = objTBLBIN.BINDesc2.ToString();
+ 
 			}
         }
     }
 	public void BindData()
     {
-            var list = DB.[Title]s[OrderBy].ToList();
+            var list = DB.TBLBINs.OrderBy(p=>p.BIN_ID).ToList();
 	        Listview1.DataSource = list;
             Listview1.DataBind();
 	}
@@ -52,11 +56,11 @@ public partial class [Title] : System.Web.UI.Page
                 if (e.CommandName == "btnDelete")
                 {
                     int ID = Convert.ToInt32(e.CommandArgument);
-                    [Title] obj[Title] = DB.[Title]s.Single(p => p.ID == ID);
-                    DB.[Title]s.Remove(obj[Title]);
+                    TBLBIN objTBLBIN = DB.TBLBINs.Single(p => p.BIN_ID == ID);
+                    DB.TBLBINs.Remove(objTBLBIN);
                     DB.SaveChanges();
 					DataBind();
-                    Response.Redirect("[Title].aspx");
+                    Response.Redirect("TBLBIN.aspx");
                 }
 				 if (e.CommandName == "btnEdit")
                     {
@@ -75,8 +79,12 @@ public partial class [Title] : System.Web.UI.Page
 		
     protected void select_data(int ID)
     {
-       [Title] obj[Title] = DB.[Title]s.Single(p=>p.ID == ID);
-		[ServerContentRecived] 
+       TBLBIN objTBLBIN = DB.TBLBINs.Single(p=>p.BIN_ID == ID);
+		drpBIN_ID.SelectedValue = objTBLBIN.BIN_ID.ToString();
+drpMyComLocID.SelectedValue = objTBLBIN.MyComLocID.ToString();
+txtBINDesc1.Text = objTBLBIN.BINDesc1.ToString();
+txtBINDesc2.Text = objTBLBIN.BINDesc2.ToString();
+ 
 		ViewState["Edit"] = ID;
     }
 
@@ -89,8 +97,11 @@ public partial class [Title] : System.Web.UI.Page
 						 if (ViewState["Edit"] != null)
                         {
 							int ID = Convert.ToInt32(ViewState["Edit"]);
-							[Title] obj[Title] = DB.[Title]s.Single(p => p.ID == ID);
-							[ServerContentSend] 
+							TBLBIN objTBLBIN = DB.TBLBINs.Single(p => p.BIN_ID == ID);
+							objTBLBIN.BIN_ID = Convert.ToInt32(drpBIN_ID.SelectedValue);
+                            objTBLBIN.MyComLocID = Convert.ToInt32(drpMyComLocID.SelectedValue);
+                            objTBLBIN.BINDesc1 = txtBINDesc1.Text;
+                            objTBLBIN.BINDesc2 = txtBINDesc2.Text; 
 
 					        ViewState["Edit"] = null;
                             btnAdd.Text = "Add New";
@@ -98,11 +109,15 @@ public partial class [Title] : System.Web.UI.Page
 						}
 						else
 						{
-							[Title] obj[Title] = new [Title]();
+							TBLBIN objTBLBIN = new TBLBIN();
 							//Server Content Send data Yogesh
-							[ServerContentSend]
+							objTBLBIN.BIN_ID = Convert.ToInt32(drpBIN_ID.SelectedValue);
+objTBLBIN.MyComLocID = Convert.ToInt32(drpMyComLocID.SelectedValue);
+objTBLBIN.BINDesc1 = txtBINDesc1.Text;
+objTBLBIN.BINDesc2 = txtBINDesc2.Text;
+
 							
-							DB.[Title]s.Add(obj[Title]);
+							DB.TBLBINs.Add(objTBLBIN);
 						}
 						DB.SaveChanges();
 						
@@ -126,7 +141,7 @@ public partial class [Title] : System.Web.UI.Page
 
 	public void FillContractorID()
     {
-	//	[BindDropDown123]
+	//	drpCRUP_ID.Items.Insert(0, new ListItem("-- Select --", "0"));drpCRUP_ID.DataSource = DB.0;drpCRUP_ID.DataTextField = "0";drpCRUP_ID.DataValueField = "0";drpCRUP_ID.DataBind();
 	}
     protected void btnFirst_Click(object sender, EventArgs e)
     {

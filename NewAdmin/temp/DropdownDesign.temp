@@ -5,11 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div class="rightpanel">
-        <ul class="breadcrumbs">
-            <li><a href="Dashboard.aspx"><i class="iconfa-home"></i></a><span class="separator">
-            </span></li>
-            <li><a href="Dashboard.aspx">Dashboard</a> <span class="separator"></span></li>
-        </ul>
+       
         <div class="pageheader">
             <div class="pageicon">
                 <span class="iconfa-pencil"></span>

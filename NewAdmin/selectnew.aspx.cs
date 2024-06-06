@@ -291,11 +291,7 @@ namespace NewAdmin
 
             if (line != null)
             {
-                //yogesh
-
-                //string queryVarcharDesign = "select  case user_type_id when 56 then '<div class=\"form-group\"><label class=\"col-md-2 control-label\">'+ REPLACE ( C.name , '_' , ' ' ) +'</label><div class=\"col-md-4\"><asp:DropDownList ID=\"drp'+C.name+'\" runat=\"server\" CssClass=\"table-group-action-input form-control input-medium\"></asp:DropDownList></div></div>' else case user_type_id when 61 then  '<div class=\"form-group\"><label class=\"col-md-2 control-label\">'+ REPLACE ( C.name , '_' , ' ' ) +'</label><div class=\"col-md-4\"><asp:TextBox Placeholder=\"MM/DD/YYYY\" ID=\"txt'+C.name+'\" runat=\"server\" CssClass=\"form-control\"></asp:TextBox><cc1:CalendarExtender ID=\"TextBox'+C.name+'_CalendarExtender\" runat=\"server\" Enabled=\"True\" PopupButtonID=\"calender\" TargetControlID=\"txt'+C.name+'\"></cc1:CalendarExtender><asp:RequiredFieldValidator ID=\"RequiredFieldValidator'+C.name+'\" runat=\"server\" ControlToValidate=\"txt'+C.name+'\" ErrorMessage=\"'+C.name+' Required.\" CssClass=\"Validation\" ValidationGroup=\"s\"></asp:RequiredFieldValidator> </div></div>' else case user_type_id when 106 then '<div class=\"form-group\"><label class=\"col-md-2 control-label\">'+ REPLACE ( C.name , '_' , ' ' ) +'</label><div class=\"col-md-4\"><asp:TextBox ID=\"txt'+C.name+'\" runat=\"server\" CssClass=\"form-control\"></asp:TextBox><asp:RequiredFieldValidator CssClass=\"Validation\" ID=\"RequiredFieldValidator'+C.name+'\" runat=\"server\" ErrorMessage=\"'+C.name+' Required\" ControlToValidate=\"txt'+C.name+'\" ValidationGroup=\"submit\"></asp:RequiredFieldValidator><cc1:FilteredTextBoxExtender ID=\"FilteredTextBoxExtender'+C.name+'\" TargetControlID=\"txt'+C.name+'\" FilterType=\"Custom, numbers\"  runat=\"server\" /> </div></div>' else case user_type_id when 104 then '<div class=\"form-group\"><label class=\"col-md-2 control-label\">'+ REPLACE ( C.name , '_' , ' ' ) +'</label><div class=\"col-md-4\"><asp:CheckBox ID=\"cb'+C.name+'\" runat=\"server\" /></div></div>' else '<div class=\"form-group\"><label class=\"col-md-2 control-label\">'+ REPLACE ( C.name , '_' , ' ' ) +'</label><div class=\"col-md-4\"><asp:TextBox ID=\"txt'+C.name+'\" runat=\"server\" CssClass=\"form-control\"></asp:TextBox><asp:RequiredFieldValidator CssClass=\"Validation\" ID=\"RequiredFieldValidator'+C.name+'\" runat=\"server\" ErrorMessage=\"'+C.name+' Required\" ControlToValidate=\"txt'+C.name+'\" ValidationGroup=\"submit\"></asp:RequiredFieldValidator></div></div>' end end end end as Type  from sys.columns C join sys.tables T on C.object_id=T.object_id  where  C.user_type_id in(SELECT user_type_id FROM sys.types)  and T.name='tbl_" + TableName + "' and column_id BETWEEN 2 AND (SELECT COUNT(COLUMN_NAME) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'tbl_" + TableName + "') order by T.Name;";
-                //string queryGridVarcharDesign = "select '<td> <asp:Label ID=\"lbl'+C.name+'\" runat=\"server\" Text=''<%# Eval(\"'+C.name+'\")%>''></asp:Label></td>' as Put_Between_Column_Tag,'<th >'+C.name+'</th>' as fieldname from sys.columns C join sys.tables T on C.object_id=T.object_id  where  C.user_type_id=(SELECT ut.user_type_id FROM sys.types AS ut WHERE ut.name = 'varchar') and T.name='tbl_" + TableName + "' order by T.Name;";
-
+  
                 int selected = 0;
 
                 txtContent = "<!--begin::Card body-->\r\n<div class=\"card-body p-9\">\r\n\t<!--begin::Row-->\r\n\t<div class=\"row mb-5\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-xl-3\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">Edit Table</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t</div>\r\n\t<!--end::Row-->";
@@ -322,29 +318,29 @@ namespace NewAdmin
                     txtTableBody += "<td> <%# Eval(\"" + lblFieldName.Text + "\")%> </td>\n\r";
                     if (check.Checked == true)
                     {
-                        if (drpControl.SelectedValue == "1")//TextBox
+                        if (drpControl.SelectedValue == "1") // TextBox
                         {
-                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--bigin::Col-->\r\n\t\t<div class=\"col-xl-1\"></div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-1\">\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\n\t\t</div>\n\t\t<!--end::Col-->\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-9 fv-row\">\n\t\t\t<asp:TextBox style=\" ID=\"txt" + lblFieldName.Text + "\" runat=\"server\" class=\"form-control form-control-solid\" name=\"type\" value=\"\" ></asp:TextBox>\n\t\t</div>\n\t</div>\n\t<!--end::Row-->";
+                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6 fv-row\">\r\n\t\t\t<asp:TextBox ID=\"txt" + lblFieldName.Text + "\" runat=\"server\" class=\"form-control\" name=\"type\" value=\"\" ></asp:TextBox>\r\n\t\t</div>\r\n\t</div>\r\n\t<!--end::Row-->";
                         }
-                        else if (drpControl.SelectedValue == "2")//TextBox with multiline
+                        else if (drpControl.SelectedValue == "2") // TextBox with multiline
                         {
-                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--bigin::Col-->\r\n\t\t<div class=\"col-xl-1\"></div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-1\">\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\n\t\t</div>\n\t\t<!--end::Col-->\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-9 fv-row\">\n\t\t\t<asp:TextBox style=\" ID=\"txt" + lblFieldName.Text + "\" runat=\"server\" TextMode=\"MultiLine\" class=\"form-control form-control-solid\" name=\"type\" value=\"\" ></asp:TextBox>\n\t\t</div>\n\t</div>\n\t<!--end::Row-->";
+                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6 fv-row\">\r\n\t\t\t<asp:TextBox ID=\"txt" + lblFieldName.Text + "\" runat=\"server\" TextMode=\"MultiLine\" class=\"form-control\" name=\"type\" value=\"\" ></asp:TextBox>\r\n\t\t</div>\r\n\t</div>\r\n\t<!--end::Row-->";
                         }
-                        else if (drpControl.SelectedValue == "3")//TextBox For DateTime
+                        else if (drpControl.SelectedValue == "3") // TextBox For DateTime
                         {
-                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--bigin::Col-->\r\n\t\t<div class=\"col-xl-1\"></div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-1\">\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\n\t\t</div>\n\t\t<!--end::Col-->\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-9 fv-row\">\n\t\t\t<asp:TextBox style=\"ID=\"txt" + lblFieldName.Text + "\" runat=\"server\"  Placeholder=\"MM/DD/YYYY\" class=\"form-control form-control-solid\" name=\"type\" value=\"\" ></asp:TextBox><cc1:CalendarExtender ID=\"TextBox" + lblFieldName.Text + "_CalendarExtender\" runat=\"server\" Enabled=\"True\" PopupButtonID=\"calender\" TargetControlID=\"txt" + lblFieldName.Text + "\"></cc1:CalendarExtender>\n\t\t</div>\n\t</div>\n\t<!--end::Row-->";
+                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6 fv-row\">\r\n\t\t\t<asp:TextBox ID=\"txt" + lblFieldName.Text + "\" runat=\"server\"  Placeholder=\"MM/DD/YYYY\" class=\"form-control\" name=\"type\" value=\"\" ></asp:TextBox><cc1:CalendarExtender ID=\"TextBox" + lblFieldName.Text + "_CalendarExtender\" runat=\"server\" Enabled=\"True\" PopupButtonID=\"calender\" TargetControlID=\"txt" + lblFieldName.Text + "\"></cc1:CalendarExtender>\r\n\t\t</div>\r\n\t</div>\r\n\t<!--end::Row-->";
                         }
-                        else if (drpControl.SelectedValue == "4")//DropDownList
+                        else if (drpControl.SelectedValue == "4") // DropDownList
                         {
-                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--bigin::Col-->\r\n\t\t<div class=\"col-xl-1\"></div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-1\">\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\n\t\t</div>\n\t\t<!--end::Col-->\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-9 fv-row\">\n\t\t\t<asp:DropDownList style=\" ID=\"drp" + lblFieldName.Text + "\" runat=\"server\" class=\"form-control form-control-solid\" name=\"type\" value=\"\" ></asp:DropDownList>\n\t\t</div>\n\t</div>\n\t<!--end::Row-->";
+                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6 fv-row\">\r\n\t\t\t<asp:DropDownList ID=\"drp" + lblFieldName.Text + "\" runat=\"server\" class=\"form-control\" name=\"type\" value=\"\" ></asp:DropDownList>\r\n\t\t</div>\r\n\t</div>\r\n\t<!--end::Row-->";
                         }
-                        else if (drpControl.SelectedValue == "5")//CheckBox
+                        else if (drpControl.SelectedValue == "5") // CheckBox
                         {
-                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--bigin::Col-->\r\n\t\t<div class=\"col-xl-1\"></div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-1\">\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\n\t\t</div>\n\t\t<!--end::Col-->\n\t\t<!--begin::Col-->\n\t\t<div class=\"col-xl-9\">\r\n\t\t\t<div class=\"d-flex fw-semibold h-100\">\r\n\t\t\t\t<div class=\"col-xl-9\">\t\n\t\t\t<asp:checkbox style=\" ID=\"cb" + lblFieldName.Text + "\" class=\"form-check-input\" type=\"checkbox\" value=\"\" runat=\"server\" data-kt-check=\"true\" data-kt-check-target=\"[data-kt-settings-notification=phone]\" ></asp:checkbox>\n\t\t</div>\n\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\n\t<!--end::Row-->";
+                            txtContent += "<!--begin::Row--><div class=\"row mb-8\">\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"fs-6 fw-semibold mt-2 mb-3\">" + txtLabelName.Text + "</div>\r\n\t\t</div>\r\n\t\t<!--end::Col-->\r\n\t\t<!--begin::Col-->\r\n\t\t<div class=\"col-md-6\">\r\n\t\t\t<div class=\"d-flex fw-semibold h-100\">\r\n\t\t\t\t<div class=\"col-md-9\">\t\n\t\t\t\t<asp:checkbox ID=\"cb" + lblFieldName.Text + "\" class=\"form-check-input\" type=\"checkbox\" value=\"\" runat=\"server\" data-kt-check=\"true\" data-kt-check-target=\"[data-kt-settings-notification=phone]\" ></asp:checkbox>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t</div>\r\n\t\t<!--end::Row-->";
                         }
                         else
                         {
-
+                           
                         }
                         if (chMendatory.Checked == true)
                         {
@@ -382,6 +378,8 @@ namespace NewAdmin
                 line.Replace("[txtTableBody]", txtTableBody);
                 SetStreamWriter(fsSave, line);
             }
+
+
             #endregion
             #region Page Server Side Creator
             txtBindDropDown = "";
